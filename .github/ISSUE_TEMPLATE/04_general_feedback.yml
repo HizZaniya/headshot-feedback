@@ -1,0 +1,37 @@
+name: "一般フィードバック / General Feedback"
+description: "感想・意見・その他 / Share your thoughts or general comments"
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Headshot についての感想や意見をお聞かせください。
+        Share any thoughts, praise, or general comments about Headshot.
+
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: "フィードバックの種類 / Feedback Type"
+      options:
+        - 感想・レビュー / Review or Impression
+        - UI・デザインの改善提案 / UI/Design Suggestion
+        - ドキュメントについて / About Documentation
+        - その他 / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: "内容 / Content"
+      description: "自由にお書きください。 / Feel free to write anything."
+      placeholder: "例: ショートカットキーの設定画面がわかりやすく使いやすかったです"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        フィードバックへの個別返答はお約束できませんが、すべて参考にします。
+        Individual replies may not always be possible, but all feedback is read and appreciated.

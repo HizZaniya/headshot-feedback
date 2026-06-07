@@ -1,0 +1,44 @@
+name: "機能リクエスト / Feature Request"
+description: "新機能・改善の提案 / Suggest a new feature or improvement"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        アイデアをお聞かせください。
+        Share your idea with us.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "提案の概要 / Feature Summary"
+      description: "どんな機能を追加・改善してほしいですか？ / What feature would you like to see?"
+      placeholder: "例: 保存先フォルダをサイトごとに自動で切り替えたい"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "背景・理由 / Motivation"
+      description: "なぜこの機能が必要ですか？ / Why is this needed?"
+      placeholder: "例: 複数のサイトを巡回しながら画像を保存するとき、フォルダが混ざってしまう"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "代替手段 / Alternatives Considered (任意 / Optional)"
+      description: "現在どのように対処していますか？ / How do you currently work around this?"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "重要度 / Priority"
+      options:
+        - 高 - これがないと使えない / High - Can't use without this
+        - 中 - あると便利 / Medium - Would be helpful
+        - 低 - あればうれしい / Low - Nice to have
+    validations:
+      required: true

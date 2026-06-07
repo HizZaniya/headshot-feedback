@@ -1,0 +1,79 @@
+name: "バグ報告 / Bug Report"
+description: "動作しない・エラーが出るなど不具合を報告する / Report something not working"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます。できるだけ詳しく記入してください。
+        Thank you for reporting a bug. Please fill in as much detail as possible.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "不具合の内容 / Bug Description"
+      description: "何が起きているか説明してください。 / What is happening?"
+      placeholder: "例: ショートカットキーを押しても画像が保存されない"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "再現手順 / Steps to Reproduce"
+      description: "不具合を再現する手順を書いてください。 / Steps to reproduce the behavior"
+      placeholder: |
+        1. 拡張機能を開く
+        2. ショートカットキーを押す
+        3. エラーが発生する
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "期待する動作 / Expected Behavior"
+      description: "本来どうなるべきか。 / What should happen instead?"
+      placeholder: "例: 画像がダウンロードフォルダに保存される"
+    validations:
+      required: true
+
+  - type: input
+    id: extension_version
+    attributes:
+      label: "拡張機能のバージョン / Extension Version"
+      description: "chrome://extensions で確認できます。 / Check at chrome://extensions"
+      placeholder: "例: 1.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: chrome_version
+    attributes:
+      label: "Chrome のバージョン / Chrome Version"
+      description: "chrome://settings/help で確認できます。 / Check at chrome://settings/help"
+      placeholder: "例: 125.0.6422.112"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS / Operating System"
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS 14 (Sonoma)
+        - macOS 13 (Ventura)
+        - macOS 12 (Monterey)
+        - Linux
+        - ChromeOS
+        - その他 / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "スクリーンショット / Screenshots (任意 / Optional)"
+      description: "エラー画面などがあれば貼り付けてください。 / Attach screenshots if available."
